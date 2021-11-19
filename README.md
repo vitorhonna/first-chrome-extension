@@ -1,3 +1,3 @@
 # Google Chrome Extensions: Getting started
 
-My first Google Chrome Extension
+Learning how to create Google Chrome Extensions
