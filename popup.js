@@ -5,19 +5,9 @@ chrome.storage.sync.get("color", ({ color }) => {
     changeColor.style.backgroundColor = color;
 });
 
-changeColor.addEventListener("click", (e) => {
-    "";
-    console.log("clicked");
-    console.log(e);
-});
-
 // When the button is clicked, inject setPageBackgroundColor into current page
 changeColor.addEventListener("click", async () => {
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-    let all = await chrome.tabs.query({ active: true, currentWindow: true });
-
-    console.log(all);
 
     chrome.scripting.executeScript({
         target: { tabId: tab.id },
